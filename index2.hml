@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>St. James Town Maker Lab</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4f46e5, #9333ea);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .subscribe-form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .subscribe-form input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 250px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #f9fafb;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #4f46e5;
+    }
+
+    /* Unified Button Style */
+    .subscribe-form button,
+    .contact-form button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: #4f46e5;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+
+    .subscribe-form button:hover,
+    .contact-form button:hover {
+      background: #4338ca;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 700px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>St. James Town Maker Lab</h1>
+    <p>Learn, build, and create together in your community</p>
+
+    <form class="subscribe-form">
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </header>
+
+  <!-- Projects / Skills Section -->
+  <section>
+    <h2 class="section-title">Stuff We'll Help You Make</h2>
+
+    <div class="grid">
+      
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop" alt="Coding">
+        <div class="card-content">
+          <h3>Coding & Tech</h3>
+          <p>Learn programming, build apps, and understand how computers really work.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581091870627-3f7f4c3b5f4b?w=800&h=400&fit=crop" alt="3D Printing">
+        <div class="card-content">
+          <h3>Electronics</h3>
+          <p>Create projects with LEDs, sensors, and microcontrollers.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&h=400&fit=crop" alt="Digital Art">
+        <div class="card-content">
+          <h3>Networking & Cyber Security</h3>
+          <p>Learn how the Internet works and how to stay secure online.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1555617117-08fda1f3d1d9?w=800&h=400&fit=crop" alt="Electronics">
+        <div class="card-content">
+          <h3>Content Creation</h3>
+          <p>Create websites, videos, stream, and learn editing for YouTube and social media.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526178613658-3f1622045557?w=800&h=400&fit=crop" alt="Media Creation">
+        <div class="card-content">
+          <h3>Computer Repair & Build</h3>
+          <p>Fix computers, upgrade hardware, and build systems from scratch.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=800&h=400&fit=crop" alt="DIY Making">
+        <div class="card-content">
+          <h3>🛠️ DIY Making</h3>
+          <p>Work on hands-on crafts, repairs, and creative building projects.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer with Contact Form -->
+  <footer>
+    <div class="footer-container">
+
+      <div>
+        <h3>Contact Us</h3>
+        <p>Have questions or want to collaborate? Send us a message!</p>
+      </div>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>©2026 by St. James Town Maker Lab is licensed under CC BY-NC-SA 4.0</p>
+    </div>
+  </footer>
+
+</body>
+</html>
