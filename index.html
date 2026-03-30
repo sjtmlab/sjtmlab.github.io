@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>St. James Town Maker Lab</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4f46e5, #9333ea);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .subscribe-form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .subscribe-form input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 250px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #f9fafb;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #4f46e5;
+    }
+
+    /* Buttons */
+    .subscribe-form button,
+    .contact-form button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: #4f46e5;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+
+    .subscribe-form button:hover,
+    .contact-form button:hover {
+      background: #4338ca;
+    }
+
+    /* Footer */
+    footer {
+      background: #111827;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .success-message {
+      display: none;
+      color: #22c55e;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .footer-bottom a {
+      color: #9ca3af;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header>
+    <h1>St. James Town Maker Lab</h1>
+    <p>Learn, build, and create together in your community</p>
+
+    <form class="subscribe-form" action="https://formspree.io/f/xbdpoalq" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+      <p class="success-message">Thanks for subscribing!</p>
+    </form>
+  </header>
+
+  <!-- Projects Section -->
+  <section>
+    <h2 class="section-title">Stuff We'll Help You Create</h2>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop" alt="Coding & Tech">
+        <div class="card-content">
+          <h3>Coding & Tech</h3>
+          <p>Learn programming, build apps, and understand how computers really work.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1555617117-08fda1f3d1d9?w=800&h=400&fit=crop" alt="Electronics">
+        <div class="card-content">
+          <h3>Electronics</h3>
+          <p>Create stuff with LEDs, sensors, and microcontrollers.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800&h=400&fit=crop" alt="Networking & Cyber Security">
+        <div class="card-content">
+          <h3>Networking & Cyber Security</h3>
+          <p>Learn how the Internet works and how to stay secure online.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800&h=400&fit=crop" alt="Content Creation & Streaming">
+        <div class="card-content">
+          <h3>Content Creation & Streaming</h3>
+          <p>Create websites, videos, stream, and learn editing for YouTube and social media.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800&h=400&fit=crop" alt="Computer Build & Repair">
+        <div class="card-content">
+          <h3>Computer Build & Repair</h3>
+          <p>Fix computers, upgrade hardware, and build systems from scratch.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=400&fit=crop" alt="Workshops & Lessons">
+        <div class="card-content">
+          <h3>Workshops & Lessons</h3>
+          <p>Join us for workshops on various topics. Let us know if you have something you'd like to present.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- About Section with extra spacing before footer -->
+<section style="background-color: #f3f4f6; border-radius:10px; padding:60px 20px; margin-bottom:60px;">
+  <h2 class="section-title">About the Maker Lab</h2>
+
+  <div class="grid">
+    <div class="card" style="display:flex; align-items:center; gap:20px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.05); background:#ffffff;">
+      <!-- Bio Image on the left -->
+      <img 
+        src="assets/img/brian_400px.png" 
+        alt="Brian Erdelyi" 
+        style="width:120px; height:120px; border-radius:50%; object-fit:cover; flex-shrink:0;"
+      >
+
+      <div class="card-content" style="text-align:left;">
+        <h3>Brian Erdelyi</h3>
+        <p>Brian Erdelyi is the creator of the St. James Town Maker Lab. He is an IT professional with 20+ years of experience in cyber security and enjoys working on his own maker projects involving wearables (LEDs), chess (3D printing), coding, cyber security, and more.</p>
+        <p>The Maker Lab is located in St. James Town, providing a community space for learning, building, and creating together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>Contact Us</h3>
+        <p>Have questions or want to collaborate? Send us a message!</p>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/xbdpoalq" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p class="success-message">Message sent! We'll get back to you soon.</p>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        ©2026 by St. James Town Maker Lab is licensed under 
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+          CC BY-NC-SA 4.0
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll("form").forEach(form => {
+      form.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.querySelector(".success-message").style.display = "block";
+          form.reset();
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
