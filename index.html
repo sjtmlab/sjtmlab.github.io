@@ -83,7 +83,8 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
 
-    .card img {
+    /* Only affect top images in cards */
+    .card > img {
       width: 100%;
       height: 150px;
       object-fit: cover;
@@ -98,7 +99,7 @@
       color: #4f46e5;
     }
 
-    /* About card responsive layout */
+    /* About card */
     .about-card {
       display: flex;
       align-items: center;
@@ -107,7 +108,8 @@
       background: #ffffff;
     }
 
-    .about-img {
+    /* FIXED profile image */
+    .about-card img.about-img {
       width: 120px;
       height: 120px;
       border-radius: 50%;
@@ -115,6 +117,7 @@
       flex-shrink: 0;
     }
 
+    /* Mobile layout */
     @media (max-width: 700px) {
       .about-card {
         flex-direction: column;
@@ -136,7 +139,6 @@
       color: white;
       cursor: pointer;
       font-weight: bold;
-      transition: background 0.2s ease;
     }
 
     .subscribe-form button:hover,
@@ -144,7 +146,6 @@
       background: #4338ca;
     }
 
-    /* Footer */
     footer {
       background: #111827;
       color: white;
@@ -168,37 +169,8 @@
     .contact-form input,
     .contact-form textarea {
       padding: 10px;
-      border: none;
       border-radius: 5px;
-      width: 100%;
-    }
-
-    .contact-form textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-
-    .success-message {
-      display: none;
-      color: #22c55e;
-      margin-top: 10px;
-      font-size: 0.9rem;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    .footer-bottom a {
-      color: #9ca3af;
-      text-decoration: none;
-    }
-
-    .footer-bottom a:hover {
-      text-decoration: underline;
+      border: none;
     }
 
     @media (max-width: 700px) {
@@ -206,120 +178,99 @@
         grid-template-columns: 1fr;
       }
     }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
-  <header>
-    <h1>St. James Town Maker Lab</h1>
-    <p>Learn, build, and create together in your community</p>
+<header>
+  <h1>St. James Town Maker Lab</h1>
+  <p>Learn, build, and create together in your community</p>
 
-    <form class="subscribe-form" action="https://formspree.io/f/xbdpoalq" method="POST">
-      <input type="email" name="email" placeholder="Enter your email" required />
-      <button type="submit">Subscribe</button>
-      <p class="success-message">Thanks for subscribing!</p>
+  <form class="subscribe-form" action="https://formspree.io/f/xbdpoalq" method="POST">
+    <input type="email" name="email" placeholder="Enter your email" required />
+    <button type="submit">Subscribe</button>
+  </form>
+</header>
+
+<section>
+  <h2 class="section-title">Stuff We'll Help You Create</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop">
+      <div class="card-content">
+        <h3>Coding & Tech</h3>
+        <p>Learn programming, build apps, and understand how computers really work.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1555617117-08fda1f3d1d9?w=800&h=400&fit=crop">
+      <div class="card-content">
+        <h3>Electronics</h3>
+        <p>Create stuff with LEDs, sensors, and microcontrollers.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800&h=400&fit=crop">
+      <div class="card-content">
+        <h3>Networking & Cyber Security</h3>
+        <p>Learn how the Internet works and how to stay secure online.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="background:#f3f4f6; margin-bottom:60px; border-radius:10px;">
+  <h2 class="section-title">About the Maker Lab</h2>
+
+  <div class="grid" style="margin-bottom:40px;">
+    <div class="card" style="padding:20px; background:#fff;">
+      <h3>What We Do</h3>
+      <p>The St. James Town Maker Lab is a community space where people can learn, build, and create together.</p>
+    </div>
+  </div>
+
+  <h3 style="text-align:center; color:#4f46e5;">Members</h3>
+
+  <div class="grid">
+    <div class="card about-card">
+      <img src="assets/img/brian_400px.png" class="about-img" alt="Brian Erdelyi">
+      <div class="card-content">
+        <h3>Brian Erdelyi</h3>
+        <p>Brian Erdelyi is the coordinator of the St. James Town Maker Lab with 20+ years in cyber security.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div>
+      <h3>Contact Us</h3>
+      <p>Send us a message!</p>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/xbdpoalq" method="POST">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
     </form>
-  </header>
+  </div>
 
-  <!-- Projects Section -->
-  <section>
-    <h2 class="section-title">Stuff We'll Help You Create</h2>
+  <div class="footer-bottom">
+    ©2026 by St. James Town Maker Lab is licensed under CC BY-NC-SA 4.0
+  </div>
+</footer>
 
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop">
-        <div class="card-content">
-          <h3>Coding & Tech</h3>
-          <p>Learn programming, build apps, and understand how computers really work.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1555617117-08fda1f3d1d9?w=800&h=400&fit=crop">
-        <div class="card-content">
-          <h3>Electronics</h3>
-          <p>Create stuff with LEDs, sensors, and microcontrollers.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800&h=400&fit=crop">
-        <div class="card-content">
-          <h3>Networking & Cyber Security</h3>
-          <p>Learn how the Internet works and how to stay secure online.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800&h=400&fit=crop">
-        <div class="card-content">
-          <h3>Content Creation & Streaming</h3>
-          <p>Create websites, videos, stream, and learn editing for YouTube and social media.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800&h=400&fit=crop">
-        <div class="card-content">
-          <h3>Computer Build & Repair</h3>
-          <p>Fix computers, upgrade hardware, and build systems from scratch.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=400&fit=crop">
-        <div class="card-content">
-          <h3>Workshops & Lessons</h3>
-          <p>Join us for workshops on various topics. Let us know if you have something you'd like to present.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section style="background-color: #f3f4f6; border-radius:10px; padding:60px 20px; margin-bottom:60px;">
-    <h2 class="section-title">About the Maker Lab</h2>
-
-    <div class="grid" style="margin-bottom:40px;">
-      <div class="card" style="padding:20px; background:#ffffff;">
-        <h3>What We Do</h3>
-        <p>The St. James Town Maker Lab is a community space where people can learn, build, and create together. We provide access to tools, workshops, and mentorship in areas like coding, electronics, cyber security, content creation, and computer repair.</p>
-      </div>
-    </div>
-
-    <h3 style="text-align:center; margin-bottom:20px; color:#4f46e5;">Members</h3>
-
-    <div class="grid">
-      <div class="card about-card">
-        <img src="assets/img/brian_400px.png" class="about-img">
-        <div class="card-content">
-          <h3>Brian Erdelyi</h3>
-          <p>Brian Erdelyi is the coordinator of the St. James Town Maker Lab. He is an IT professional with 20+ years of experience in cyber security and enjoys working on maker projects involving wearables, 3D printing, coding, and more.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div>
-        <h3>Contact Us</h3>
-        <p>Have questions or want to collaborate? Send us a message!</p>
-      </div>
-
-      <form class="contact-form" action="https://formspree.io/f/xbdpoalq" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-
-    <div class="footer-bottom">
-      <p>©2026 by St. James Town Maker Lab is licensed under CC BY-NC-SA 4.0</p>
-    </div>
-  </footer>
 </body>
 </html>
